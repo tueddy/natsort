@@ -59,6 +59,9 @@ static void trace_result(char const *a, char const *b, int ret)
 }
 
 
+/* 
+
+main() is for CLI only, avoid warning, see https://github.com/sourcefrog/natsort/issues/14#issuecomment-2041110834
 
 static int compare_strings(const void *a, const void *b)
 {
@@ -92,9 +95,7 @@ static void usage(void)
                  "  --reverse, -r        reverse the result of comparisons\n");
 }
 
-/* 
 
-main() is for CLI only, avoid warning, see https://github.com/sourcefrog/natsort/issues/14#issuecomment-2041110834
 
 int main(int argc, char **argv)
 {
