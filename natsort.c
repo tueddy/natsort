@@ -41,7 +41,12 @@
 #  define UNUSED __attribute__((__unused__))
 #endif
 
+/* 
+
 static int fold_case = 0, verbose = 0, reverse = 0;
+
+
+main() is for CLI only, avoid warning, see https://github.com/sourcefrog/natsort/issues/14#issuecomment-2041110834
 
 static void trace_result(char const *a, char const *b, int ret)
 {
@@ -59,9 +64,7 @@ static void trace_result(char const *a, char const *b, int ret)
 }
 
 
-/* 
 
-main() is for CLI only, avoid warning, see https://github.com/sourcefrog/natsort/issues/14#issuecomment-2041110834
 
 static int compare_strings(const void *a, const void *b)
 {
