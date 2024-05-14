@@ -92,6 +92,9 @@ static void usage(void)
                  "  --reverse, -r        reverse the result of comparisons\n");
 }
 
+/* 
+
+main() is for CLI only, avoid warning, see https://github.com/sourcefrog/natsort/issues/14#issuecomment-2041110834
 
 int main(int argc, char **argv)
 {
@@ -110,7 +113,7 @@ int main(int argc, char **argv)
           { 0, 0, 0, 0 }
      };
 
-     /* process arguments */
+     // process arguments 
      while ((c = getopt_long(argc, argv, "frvh", long_options, &opt_ind)) != -1) {
           switch (c) {
           case 'f':
@@ -132,7 +135,7 @@ int main(int argc, char **argv)
           }
      }
 
-     /* read lines into an array */
+     // read lines into an array 
      while (1) {
           line = NULL;
           bufsize = 0;
@@ -158,11 +161,11 @@ int main(int argc, char **argv)
      }
      fclose(stdin);
 
-     /* quicksort */
+     // quicksort 
      if (list)
           qsort(list, nlines, sizeof list[0], compare_strings);
 
-     /* and output */
+     // and output 
      for (i = 0; i < nlines; i++) {
           puts(list[i]);
      }
@@ -173,3 +176,4 @@ int main(int argc, char **argv)
 
      return 0;
 }
+*/
